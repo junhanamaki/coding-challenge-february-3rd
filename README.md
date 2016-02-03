@@ -6,7 +6,7 @@ how to run:
 
         $ bundle
 
-2. run executable:
+2. run executable (terminate with CTRL+d to signal EOF and show output):
 
         $ bin/explorer
 
