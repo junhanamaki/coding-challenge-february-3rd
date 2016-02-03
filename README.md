@@ -12,7 +12,7 @@ how to run:
 
 3. to run sample case do:
 
-        $ bin/explorer < inputs/test.input
+        $ bin/explorer < sample/test1.input
 
 assumptions:
 
