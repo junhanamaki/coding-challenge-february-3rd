@@ -10,7 +10,7 @@ how to run:
 
         $ bin/explorer
 
-2.1. for sample case run:
+3. to run sample case do:
 
         $ bin/explorer < inputs/test.input
 
