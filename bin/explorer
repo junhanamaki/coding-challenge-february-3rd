@@ -7,7 +7,7 @@ gets # discard extra line
 
 plateau = Explorer::Plateau.new(x_max.to_i, y_max.to_i)
 
-while true do
+while !STDIN.eof? do
   initial_x, initial_y, direction = gets.split(" ")
   gets # discard extra line
 
