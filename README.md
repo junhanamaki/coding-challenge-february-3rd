@@ -1,5 +1,19 @@
 # coding-challenge-february-3rd
 
+how to run:
+
+1. install dependencies:
+
+        $ bundle
+
+2. run executable:
+
+        $ bin/explorer
+
+2.1. for sample case run:
+
+        $ bin/explorer < inputs/test.input
+
 assumptions:
 
 - the upper right coordinates of the plateau are given in a "X-max Y-max" format

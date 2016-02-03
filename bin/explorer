@@ -7,6 +7,8 @@ gets # discard extra line
 
 plateau = Explorer::Plateau.new(x_max.to_i, y_max.to_i)
 
+final_coordinates = []
+
 while !STDIN.eof? do
   initial_x, initial_y, direction = gets.split(" ")
   gets # discard extra line
@@ -16,6 +18,8 @@ while !STDIN.eof? do
   instructions = gets
   gets # discard extra line
 
-  puts rover.process_instructions_and_report_coordinates!(instructions)
-  puts
+  final_coordinates << rover.process_instructions_and_report_coordinates!(instructions)
 end
+
+# output coordinates
+final_coordinates.each { |c| puts c; puts }
