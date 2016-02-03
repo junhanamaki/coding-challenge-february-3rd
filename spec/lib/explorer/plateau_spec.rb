@@ -10,11 +10,11 @@ describe Explorer::Plateau do
     end
   end
 
-  describe "#can_i_move_to?" do
+  describe "#movable_coordinate?" do
     let(:plateau) { Explorer::Plateau.new(5, 5) }
 
     context "given two coordinates inside plateau limits" do
-      before { @result = plateau.can_i_move_to?(4, 4) }
+      before { @result = plateau.movable_coordinate?(4, 4) }
 
       it "returns true" do
         expect(@result).to be(true)

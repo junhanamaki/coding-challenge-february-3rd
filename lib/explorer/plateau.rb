@@ -8,7 +8,7 @@ module Explorer
       @y_max = y_max
     end
 
-    def can_i_move_to?(x, y)
+    def movable_coordinate?(x, y)
       x >= @x_min && x <= @x_max && y >= @y_min && y <= @y_max
     end
 
