@@ -13,11 +13,43 @@ describe Explorer::Plateau do
   describe "#movable_coordinate?" do
     let(:plateau) { Explorer::Plateau.new(5, 5) }
 
-    context "given two coordinates inside plateau limits" do
+    context "given coordinates inside plateau limits" do
       before { @result = plateau.movable_coordinate?(4, 4) }
 
       it "returns true" do
         expect(@result).to be(true)
+      end
+    end
+
+    context "given negative x as coordinate" do
+      before { @result = plateau.movable_coordinate?(-1, 4) }
+
+      it "returns false" do
+        expect(@result).to be(false)
+      end
+    end
+
+    context "given negative y as coordinate" do
+      before { @result = plateau.movable_coordinate?(4, -1) }
+
+      it "returns false" do
+        expect(@result).to be(false)
+      end
+    end
+
+    context "given x beyond the limits as coordinate" do
+      before { @result = plateau.movable_coordinate?(7, 4) }
+
+      it "returns false" do
+        expect(@result).to be(false)
+      end
+    end
+
+    context "given y beyond the limits as coordinate" do
+      before { @result = plateau.movable_coordinate?(4, 7) }
+
+      it "returns false" do
+        expect(@result).to be(false)
       end
     end
   end
