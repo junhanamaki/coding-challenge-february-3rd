@@ -4,7 +4,7 @@ describe Explorer::Plateau do
     context "given two coordinates" do
       before { @plateau = Explorer::Plateau.new(1, 1) }
 
-      it "should initialize a new instance of Plateau" do
+      it "initializes a new instance of Plateau" do
         expect(@plateau).to be_a(Explorer::Plateau)
       end
     end
