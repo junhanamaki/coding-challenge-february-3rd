@@ -70,6 +70,74 @@ describe Explorer::Rover do
             expect(@new_direction).to eq("W")
           end
         end
+
+        context "when invoked with 'R'" do
+          before { @new_direction = rover.update_direction!("R") }
+
+          it "returns 'E'" do
+            expect(@new_direction).to eq("E")
+          end
+        end
+      end
+
+      context "rover at x1, y2, facing W" do
+        let(:rover) { Explorer::Rover.new(plateau, 1, 2, 'W') }
+
+        context "when invoked with 'L'" do
+          before { @new_direction = rover.update_direction!("L") }
+
+          it "returns 'S'" do
+            expect(@new_direction).to eq("S")
+          end
+        end
+
+        context "when invoked with 'R'" do
+          before { @new_direction = rover.update_direction!("R") }
+
+          it "returns 'N'" do
+            expect(@new_direction).to eq("N")
+          end
+        end
+      end
+
+      context "rover at x1, y2, facing S" do
+        let(:rover) { Explorer::Rover.new(plateau, 1, 2, 'S') }
+
+        context "when invoked with 'L'" do
+          before { @new_direction = rover.update_direction!("L") }
+
+          it "returns 'E'" do
+            expect(@new_direction).to eq("E")
+          end
+        end
+
+        context "when invoked with 'R'" do
+          before { @new_direction = rover.update_direction!("R") }
+
+          it "returns 'W'" do
+            expect(@new_direction).to eq("W")
+          end
+        end
+      end
+
+      context "rover at x1, y2, facing E" do
+        let(:rover) { Explorer::Rover.new(plateau, 1, 2, 'E') }
+
+        context "when invoked with 'L'" do
+          before { @new_direction = rover.update_direction!("L") }
+
+          it "returns 'N'" do
+            expect(@new_direction).to eq("N")
+          end
+        end
+
+        context "when invoked with 'R'" do
+          before { @new_direction = rover.update_direction!("R") }
+
+          it "returns 'S'" do
+            expect(@new_direction).to eq("S")
+          end
+        end
       end
     end
   end
